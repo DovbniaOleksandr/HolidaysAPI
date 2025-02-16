@@ -7,10 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysAPI", "HolidaysAPI\
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysAPI.Tests", "..\HolidaysAPI.Tests\HolidaysAPI.Tests.csproj", "{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}"
-	ProjectSection(ProjectDependencies) = postProject
-		{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367} = {CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysAPI.Tests", "HolidaysAPI.Tests\HolidaysAPI.Tests.csproj", "{8A3500FF-17BF-45BF-A213-358156DCBE17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +23,10 @@ Global
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3500FF-17BF-45BF-A213-358156DCBE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3500FF-17BF-45BF-A213-358156DCBE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3500FF-17BF-45BF-A213-358156DCBE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3500FF-17BF-45BF-A213-358156DCBE17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
