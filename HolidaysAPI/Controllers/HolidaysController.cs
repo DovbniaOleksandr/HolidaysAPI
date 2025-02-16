@@ -36,7 +36,7 @@ namespace HolidaysAPI.Controllers
         {
             var dateStatus = await _holidayService.GetDateStatusAsync(date);
 
-            return Ok(dateStatus);
+            return Ok(dateStatus.ToString());
         }
 
         [HttpGet("get-max-consecutive-free-days")]
