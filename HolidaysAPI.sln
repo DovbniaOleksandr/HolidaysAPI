@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysAPI", "HolidaysAPI\HolidaysAPI.csproj", "{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaysAPI.Tests", "..\HolidaysAPI.Tests\HolidaysAPI.Tests.csproj", "{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367} = {CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF8EC94-4CF4-49E2-9F67-0DD8662D7367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5042F3A7-3AFA-4249-81DD-D5C18EF50E91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9208D6EA-5625-4590-A5E2-9A4EEC25DB21}
+	EndGlobalSection
+EndGlobal

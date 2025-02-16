@@ -1,0 +1,27 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Str0ngP@ssw0rd!
+      - MSSQL_DB=HolidaysDB
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+  holidaysapi:
+    image: ${DOCKER_REGISTRY-}holidaysapi
+    build:
+      context: .
+      dockerfile: HolidaysAPI/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ConnectionStrings__HolidaysDBConnection=Server=sqlserver;Database=HolidaysDB;User Id=sa;Password=Str0ngP@ssw0rd!;Integrated Security=True;TrustServerCertificate=True;Trusted_Connection = false;
+    depends_on:
+      - sqlserver
+
+volumes:
+  sqlserver-data:
