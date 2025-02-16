@@ -1,6 +1,6 @@
 using HolidaysAPI.DB.Repositories;
-using HolidaysAPI.Enums;
-using HolidaysAPI.Models;
+using HolidaysAPI.Models.Entities;
+using HolidaysAPI.Models.Enums;
 using HolidaysAPI.Services;
 using HolidaysAPI.Services.EnricoAPI;
 using HolidaysAPI.Services.EnricoAPI.Models;

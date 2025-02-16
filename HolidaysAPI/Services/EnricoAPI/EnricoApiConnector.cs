@@ -1,7 +1,7 @@
 ﻿using HolidaysAPI.Services.EnricoAPI.Models;
 using Newtonsoft.Json;
-using Country = HolidaysAPI.Models.Country;
-using Holiday = HolidaysAPI.Models.Holiday;
+using Country = HolidaysAPI.Models.Entities.Country;
+using Holiday = HolidaysAPI.Models.Entities.Holiday;
 
 namespace HolidaysAPI.Services.EnricoAPI
 {

@@ -1,4 +1,7 @@
-﻿using HolidaysAPI.Services;
+﻿using AutoMapper;
+using HolidaysAPI.Models.DTOs;
+using HolidaysAPI.Models.Entities;
+using HolidaysAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HolidaysAPI.Controllers
@@ -8,31 +11,30 @@ namespace HolidaysAPI.Controllers
     public class HolidaysController : ControllerBase
     {
         private readonly IHolidayService _holidayService;
+        private readonly IMapper _mapper;
 
-        public HolidaysController(IHolidayService holidayService)
+        public HolidaysController(IHolidayService holidayService, IMapper mapper)
         {
             _holidayService = holidayService;
+            _mapper = mapper;
         }
 
         [HttpGet("grouped-by-month")]
-        public async Task<ActionResult<IEnumerable<object>>> GetGroupedHolidaysByMonth([FromQuery] string countryCode, [FromQuery] int year)
+        public async Task<IActionResult> GetGroupedHolidaysByMonth([FromQuery] string countryCode, [FromQuery] int year)
         {
             var groupedHolidays = await _holidayService.GetHolidaysGroupedByMonthAsync(countryCode, year);
 
-            return Ok(groupedHolidays.Select(g => new
-            {
-                Month = g.Key,
-                Holidays = g.Select(h => new
+            var groupedHolidaysDto = groupedHolidays.Select(g => new HolidaysGroupedByMonthDto
                 {
-                    h.Id,
-                    h.Name,
-                    Date = h.Date.ToString("yyyy-MM-dd")
-                })
-            }));
+                    Month = g.Key,
+                    Holidays = _mapper.Map<List<HolidayDto>>(g.ToList())
+                });
+
+            return Ok(groupedHolidaysDto);
         }
 
         [HttpGet("get-date-status")]
-        public async Task<ActionResult<IEnumerable<object>>> GetDateStatus([FromQuery] DateTime date)
+        public async Task<IActionResult> GetDateStatus([FromQuery] DateTime date)
         {
             var dateStatus = await _holidayService.GetDateStatusAsync(date);
 
@@ -40,7 +42,7 @@ namespace HolidaysAPI.Controllers
         }
 
         [HttpGet("get-max-consecutive-free-days")]
-        public async Task<ActionResult<IEnumerable<object>>> GetMaxConsecutiveFreeDays([FromQuery] string countryCode, [FromQuery] int year)
+        public async Task<IActionResult> GetMaxConsecutiveFreeDays([FromQuery] string countryCode, [FromQuery] int year)
         {
             var maxStreak = await _holidayService.GetMaxConsecutiveFreeDays(countryCode, year);
 

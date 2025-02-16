@@ -11,6 +11,7 @@ namespace HolidaysAPI.Tests
         public HolidaysControllerSmokeTests(WebApplicationFactory<Program> factory)
         {
             Environment.SetEnvironmentVariable("ConnectionStrings:HolidaysDBConnection", "Server=localhost,1433;Database=HolidaysDB_Test;User Id=sa;Password=Str0ngP@ssw0rd!;Integrated Security=True;TrustServerCertificate=True;Trusted_Connection = false;");
+
             _factory = factory.WithWebHostBuilder(builder =>
             {
                 builder.ConfigureServices(services =>

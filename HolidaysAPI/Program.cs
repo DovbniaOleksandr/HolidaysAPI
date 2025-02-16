@@ -1,9 +1,9 @@
 using HolidaysAPI.DB;
 using HolidaysAPI.DB.Repositories;
 using HolidaysAPI.Extensions;
+using HolidaysAPI.Models;
 using HolidaysAPI.Services;
 using HolidaysAPI.Services.EnricoAPI;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +23,8 @@ builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IHolidayService, HolidayService>();
 builder.Services.AddScoped<IHolidayRepository, HolidayRepository>();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();
 

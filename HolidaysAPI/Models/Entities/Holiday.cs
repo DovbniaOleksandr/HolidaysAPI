@@ -1,4 +1,4 @@
-﻿namespace HolidaysAPI.Models
+﻿namespace HolidaysAPI.Models.Entities
 {
     public class Holiday
     {

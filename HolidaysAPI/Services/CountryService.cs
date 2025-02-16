@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using HolidaysAPI.DB.Repositories;
-using HolidaysAPI.Models;
+using HolidaysAPI.Models.Entities;
 using HolidaysAPI.Services.EnricoAPI;
 
 namespace HolidaysAPI.Services

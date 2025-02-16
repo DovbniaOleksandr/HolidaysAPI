@@ -1,5 +1,5 @@
-﻿using HolidaysAPI.Enums;
-using HolidaysAPI.Models;
+﻿using HolidaysAPI.Models.Entities;
+using HolidaysAPI.Models.Enums;
 
 namespace HolidaysAPI.Services
 {

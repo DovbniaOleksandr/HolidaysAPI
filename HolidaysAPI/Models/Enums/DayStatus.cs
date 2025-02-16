@@ -1,4 +1,4 @@
-﻿namespace HolidaysAPI.Enums
+﻿namespace HolidaysAPI.Models.Enums
 {
     public enum DayStatus
     {

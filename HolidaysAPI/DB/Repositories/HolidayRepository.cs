@@ -1,4 +1,4 @@
-﻿using HolidaysAPI.Models;
+﻿using HolidaysAPI.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HolidaysAPI.DB.Repositories
